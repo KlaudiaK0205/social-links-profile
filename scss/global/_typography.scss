@@ -1,0 +1,16 @@
+@use '../util' as u;
+
+h1,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h1  {
+    font-size: u.rem(24);
+    font-weight: 600;
+}
+
+p {
+    font-size: u.rem(14); 
+}

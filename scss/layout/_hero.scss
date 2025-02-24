@@ -1,0 +1,57 @@
+@use '../util' as u;
+
+.profile {
+    background-color: var(--c-profile-background);
+    padding: u.rem(24);
+    border-radius: u.rem(12);
+    text-align: center;
+
+    @include u.breakpoint(tablet) {
+        padding: u.rem(40);
+    }
+
+    &__img {
+        border-radius: 50%;
+        padding-bottom: 24px;
+        margin: 0 auto;
+    }
+
+    &__name {
+        color: var(--c-text);
+    }
+
+    &__address {
+        padding-top: u.rem(4);
+        padding-bottom: u.rem(24);
+        color: var(--c-address);
+        font-weight: 700;
+    }
+
+    &__job {
+        color: var(--c-text);
+    }
+}
+
+.social {
+
+    &__item {
+            font-family: 'Inter', Arial, Helvetica, sans-serif;
+            background-color: var(--c-buttons);
+            font-weight: 600;
+            color: var(--c-text);
+            width: 100%;
+            border: none;
+            border-radius: u.rem(8);
+            cursor: pointer;
+            box-shadow: inset 0 0 0 0 var(--c-buttons);
+            transition: ease-out 0.3s ;
+
+            &:hover {
+                box-shadow: inset u.rem(500) 0 0 var(--c-address);
+            }
+    
+        &:not(:last-child) {
+            margin-bottom: u.rem(16);
+        }
+    }
+}

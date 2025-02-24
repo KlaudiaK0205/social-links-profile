@@ -1,0 +1,58 @@
+@use "../util" as u;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  background-color: var(--c-background);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a,
+a:active,
+a:visited {
+  display: block;
+  color: var(--c-text);
+  text-decoration: none;
+  padding: u.rem(12) 0;
+}
+
+a:hover,
+a:focus {
+  color: var(--c-buttons);
+}
+
+.wrapper {
+  max-width: u.rem(327);
+
+  @include u.breakpoint(tablet) {
+    min-width: u.rem(456);
+  }
+
+  @include u.breakpoint(desktop) {
+    min-width: u.rem(384);
+  }
+}
